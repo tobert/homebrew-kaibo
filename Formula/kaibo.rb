@@ -40,8 +40,10 @@ class Kaibo < Formula
   end
 
   def install
-    # Archives nest one directory: kaibo-v<version>-<target>/{kaibo,README.md,LICENSE}.
-    bin.install Dir["kaibo-*/kaibo"].first
+    # The archive's single top-level dir (kaibo-v<version>-<target>/, holding
+    # kaibo + README.md + LICENSE) is auto-descended by Homebrew staging, so the
+    # binary is right here in the cwd.
+    bin.install "kaibo"
   end
 
   test do
