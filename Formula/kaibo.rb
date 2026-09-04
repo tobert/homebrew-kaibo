@@ -14,28 +14,28 @@
 class Kaibo < Formula
   desc "Read-only MCP consult agent: grounded, cited answers about a codebase from a model outside your own family"
   homepage "https://github.com/tobert/kaibo"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/tobert/kaibo/releases/download/v#{version}/kaibo-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "bcc7c1fce1d2bb71ed0c9ae91a03e8bf1235b6ec32b6fc0598379d8c2a117cd0"
+      sha256 "63f27216cbff1413afaaedc007b12dbb3347341257fb9d6e2045a5d746142cb3"
     end
     if Hardware::CPU.intel?
       url "https://github.com/tobert/kaibo/releases/download/v#{version}/kaibo-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "d2b3ee385dafdb0fa96fe77f34e348533963617a3633f7b216d22b904ed88ed9"
+      sha256 "8736b487cc3827134a32074bafa693dd662370d3b9d38b94042ffc1efb803488"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/tobert/kaibo/releases/download/v#{version}/kaibo-v#{version}-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "07823e735ca375e75b07d2e46af0873066639650e82b817b587c1dd6ea5c73c5"
+      sha256 "8ea7bbb60c1832243859d067801061a154ded361321ec12c708ea99b994f9f90"
     end
     if Hardware::CPU.intel?
       url "https://github.com/tobert/kaibo/releases/download/v#{version}/kaibo-v#{version}-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "35c3268dd9b24f81b05aeed668ef891dcbcec04076b73eaa777f8b98e6e55a8c"
+      sha256 "7b02a8d81c7bd33e155a2ebee1f13e81bda90c8f9a04eb832cbb1cd4eed3a097"
     end
   end
 
